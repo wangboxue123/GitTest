@@ -1,0 +1,26 @@
+/*检验冰雹猜想*/
+#include <stdio.h> 
+int
+ 
+main(void) 
+{
+   int s ,i ,a ;
+   printf("请输入项数:") ;
+   scanf("%d",&a ) ;
+   int n  ;
+   int sum=0 ;
+   for(n=2; n<=a ; n++ ){
+       s=n;
+       for (i=1 ; s!=1 ; i++ ){
+          if (s%2)
+             s=s*3+1;
+          else
+             s/=2 ;}
+       if (i>=sum)
+          sum=i  ;
+ }
+   printf("%d",sum);      
+   putchar('\n');
+   return 0;
+}
+
