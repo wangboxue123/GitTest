@@ -1,0 +1,28 @@
+/*寻找质数*/
+
+#include <stdio.h> 
+int
+ 
+main(void) 
+{
+   int i , n ,a ;
+   printf("请输入项数:") ;
+   scanf("%d",&a ) ;
+   int number=1  ;
+   int sum=2 ;
+   for(n=2; n<=a ; n++ ){
+       for(i=2 ;i<n ;i++ ){
+           if(n%i==0)
+               i=n+2;
+           if(i==n-1)
+             { sum=n;
+              number+=1;}
+       }
+   }
+   
+   printf("最大的质数%d\n",sum);
+   printf("质数的个数%d",number);      
+   putchar('\n');
+   return 0;
+}
+
